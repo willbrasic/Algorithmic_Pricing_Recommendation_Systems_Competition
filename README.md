@@ -6,7 +6,7 @@ Hi there! Thank you for checking out my repository! For the full paper this proj
 
 ## Table of Contents
 
-- [Asymmetric Multi-Agent Reinforcement Learning Pricing Competition](#project-name)
+- [Algorithmic Pricing, Recommendation Systems, and Competition](#project-name)
   - [Overview](#overview)
   - [Table of Contents](#table-of-contents)
   - [Getting Started](#getting-started)
