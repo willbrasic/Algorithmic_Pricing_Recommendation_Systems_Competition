@@ -22,9 +22,9 @@ Hi there! Thank you for checking out my repository! For the full paper this proj
   ### Description of Repository
 
   1. The folders starting with "LE" correspond to the logit equilibrium fixed point solvers for each underlying demand specification.
-  2. The folders starting with "NO_RS" correspond to the no recommendation system results meaning the experiment consists of two pricing algorithms engaging on a platform that does not use a RS.
+  2. The folders starting with "No_RS" correspond to the no recommendation system results meaning the experiment consists of two pricing algorithms engaging on a platform that does not use a RS.
   3. The folders starting with "RS" correspond to the with recommendation system results meaning the experiment consists of two pricing algorithms engaging on a platform that does use a RS.
-  4. The folders with "Het" in the name just mean their is consumer heterogeneity in some way which is directly reflected through the product preference matrix "a".
+  4. The folders with "Het" in the name simply mean there is consumer heterogeneity in some way which is directly reflected through the product preference matrix "a".
 
   ### Prerequisites
 
