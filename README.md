@@ -21,7 +21,10 @@ Hi there! Thank you for checking out my repository! For the full paper this proj
 
   ### Description of Repository
 
-  The Paper folder contains the paper for this project.
+  1. The folders starting with "LE" correspond to the logit equilibrium fixed point solvers for each underlying demand specification.
+  2. The folders starting with "NO_RS" correspond to the no recommendation system results meaning the experiment consists of two pricing algorithms engaging on a platform that does not use a RS.
+  3. The folders starting with "RS" correspond to the with recommendation system results meaning the experiment consists of two pricing algorithms engaging on a platform that does use a RS.
+  4. The folders with "Het" in the name just mean their is consumer heterogeneity in some way which is directly reflected through the product preference matrix "a".
 
   ### Prerequisites
 
@@ -32,32 +35,14 @@ Hi there! Thank you for checking out my repository! For the full paper this proj
 
   ```bash
   # Clone the repository
-  git clone https://github.com/willbrasic/Asymmetric_Multi-Agent_Reinforcement_Learning_Pricing_Competition.git
+  git clone https://github.com/willbrasic/Algorithmic_Pricing_Recommendation_Systems_Competition.git
 
   # Navigate to the project directory
-  cd Asymmetric_Multi-Agent_Reinforcement_Learning_Pricing_Competition
-  ```
-
-  ## Docker Image
-
-  A Docker container is available for this project on Docker Hub. This container allows you to run the code contained in SARSA_Qlearning_C++_OOP without needing to install C++ or set up dependencies on your system. You will need to install Docker Desktop and have it running while executing the next two lines.
-
-  ### Pull the Docker Image
-
-  To use the containerized version, pull the Docker image from Docker Hub:
-
-  ```bash
-  docker pull willbrasic/sarsa_qlearning:latest
-  ```
-
-  ### Run Container
-
-  To run the container, use the following line:
-
-  ```bash
-  docker run --rm willbrasic/sarsa_qlearning:latest
+  cd Algorithmic_Pricing_Recommendation_Systems_Competition
   ```
 
   ## Results
 
-  
+  The core result of the paper is that a platform's RS algorithm can successfully and autonomously mitigate tacit algorithmic collusion. The following picture shows the learning trajectories observed for the main outcomes of interest. It illustrates that not only do prices never even reach the Bertrand-Nash benchmark, but consumers are actually better off relative to the no recommendation system case, and this result holds even when the platform places high weight on revenues (higher ω) relative to consumer welfare. Note, the shaded area in the figure represents the interquartile range of each variable.
+
+  ![Picture 1](Pictures/RS_Het_LC.png)
