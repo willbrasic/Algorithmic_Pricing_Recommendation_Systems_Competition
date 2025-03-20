@@ -4,6 +4,8 @@ Hi there! Thank you for checking out my repository! For the full paper this proj
 
 ## Overview
 
+This project contains an experiment where two reinforcement learning (RL) pricing algorithms engage in Bertrand-Markov pricing competition on a platform that uses a RL-based recommendation system to determine which product to display to certain consumer types. The main result is that autonomous algorithmic collusion is mitigated, and consumers are actually made better off when the recommendation algorithm is present relative to without it. 
+
 ## Table of Contents
 
 - [Algorithmic Pricing, Recommendation Systems, and Competition](#project-name)
