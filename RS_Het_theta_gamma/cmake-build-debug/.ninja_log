@@ -1,0 +1,9 @@
+# ninja log v6
+1172	1370	7609321675335131	Baseline_Varying_lambda.exe	740908aa1bdb2b74
+1504	1697	7621351916900492	RS_Het_theta_gamma_Heat.exe	a2a34ae840069aae
+1220	1420	7618811557782908	RS_Het_Varying_tau.exe	98cd1f5ba15bf437
+7	360	7623026520307302	build.ninja	341d6041cf74a4f2
+16	1681	7621354556632299	CMakeFiles/RS_Het_theta_gamma.dir/Global.cpp.obj	5ede2ea2a0bef11e
+7	3717	7621356160680566	CMakeFiles/RS_Het_theta_gamma.dir/main.cpp.obj	5059a64f61bd0462
+3718	3919	7621356197794109	RS_Het_theta_gamma.exe	ffbdf4a47f5e246a
+11	2021	7621354556572289	CMakeFiles/RS_Het_theta_gamma.dir/Functions.cpp.obj	15062d836c11421d

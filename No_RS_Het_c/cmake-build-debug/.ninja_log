@@ -1,0 +1,9 @@
+# ninja log v6
+46	662	7630893378371052	build.ninja	42a00710402bf7ee
+2386	2575	7624713754222108	No_RS_Het_theta_gamma.exe	93e1497816076cd6
+15	967	7630893408631719	CMakeFiles/No_RS_Het_c.dir/Global.cpp.obj	fc5debce435d7da7
+8	1591	7630893408572036	CMakeFiles/No_RS_Het_c.dir/Functions.cpp.obj	5088e07678472018
+3	2472	7630893408516585	CMakeFiles/No_RS_Het_c.dir/main.cpp.obj	e5ea47afbf800cd4
+2472	2809	7630893433217088	No_RS_Het_c.exe	2a160f3d89502681
+7	875	7630894106862668	CMakeFiles/No_RS_Het_c.dir/Global.cpp.obj	fc5debce435d7da7
+877	1058	7630894115556560	No_RS_Het_c.exe	2a160f3d89502681

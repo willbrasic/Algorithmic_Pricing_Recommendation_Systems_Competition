@@ -1,0 +1,56 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "RS_Het_c",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "RS_Het_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RS_Het_c-Debug-ab15474178bfe7de41a5.json",
+					"name" : "RS_Het_c",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/wbras/OneDrive/Documents/Desktop/UA/3rd_Year_Paper/3rd_Year_Paper_Code/RS_Het_c/cmake-build-debug",
+		"source" : "C:/Users/wbras/OneDrive/Documents/Desktop/UA/3rd_Year_Paper/3rd_Year_Paper_Code/RS_Het_c"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
