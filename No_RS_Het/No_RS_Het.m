@@ -214,7 +214,7 @@ converge_store = zeros(E, 1);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Time periods used for trigger strategy test (+ 1)
-t_rp = 19;
+t_rp = 99;
 
 % Price vector to store evolution before and after trigger strategy test
 p_sellers_rp = zeros(n, t_rp, E);

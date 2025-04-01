@@ -1,0 +1,12 @@
+# ninja log v6
+1172	1370	7609321675335131	Baseline_Varying_lambda.exe	740908aa1bdb2b74
+7	3646	7624657547881694	CMakeFiles/RS_Het_alpha_beta_Heat.dir/main.cpp.obj	dc95a52fb4169607
+1220	1420	7618811557782908	RS_Het_Varying_tau.exe	98cd1f5ba15bf437
+7	403	7628930557067099	build.ninja	ef51b1f651509e59
+14	2249	7624645529479962	CMakeFiles/RS_Het_alpha_beta_Heat.dir/Functions.cpp.obj	f04164a8f86dfc6d
+15	1607	7624657547959456	CMakeFiles/RS_Het_alpha_beta_Heat.dir/Global.cpp.obj	85a85224eb899eda
+3646	3846	7624657584272812	RS_Het_alpha_beta_Heat.exe	cc614499725d49c8
+25	1703	7628932254526045	CMakeFiles/RS_Het_alpha_beta_Heat.dir/Global.cpp.obj	a803fbd88d02986e
+17	2038	7628932254450840	CMakeFiles/RS_Het_alpha_beta_Heat.dir/Functions.cpp.obj	b4d62920a1cb9e14
+8	3906	7628932254355577	CMakeFiles/RS_Het_alpha_beta_Heat.dir/main.cpp.obj	5482511f9f08eae7
+3906	4166	7628932293334060	RS_Het_alpha_beta_Heat.exe	cc614499725d49c8

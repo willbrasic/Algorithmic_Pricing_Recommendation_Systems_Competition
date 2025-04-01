@@ -326,10 +326,10 @@ int main()
                                                          std::exp((a[1][1] - (theta[1] * p_sellers_t_1) - c[1]) / mu) + exp_a_0_mu))
                                 );
 
-                                cs_current = mu * (tau * (gammma_current * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers_t_0)) / mu) + exp_a_0_mu))
-                                                                  + (1 - gammma_current) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers_t_0)) / mu) + exp_a_0_mu)))
-                                                   + (1 - tau) * (gammma_current * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers_t_0) - c[0]) / mu) + std::exp((a[1][0] - (theta[0] * p_sellers_t_1) - c[0]) / mu) + exp_a_0_mu))
-                                                                          + (1 - gammma_current) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers_t_0) - c[1]) / mu) + std::exp((a[1][1] - (theta[1] * p_sellers_t_1) - c[1]) / mu) + exp_a_0_mu))));
+                                cs_current = (tau * ((mu / theta[0]) * gammma_current * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers_t_0)) / mu) + exp_a_0_mu))
+                                                                  + (mu / theta[1]) *  (1 - gammma_current) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers_t_0)) / mu) + exp_a_0_mu)))
+                                                   + (1 - tau) * ((mu / theta[0]) * gammma_current * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers_t_0) - c[0]) / mu) + std::exp((a[1][0] - (theta[0] * p_sellers_t_1) - c[0]) / mu) + exp_a_0_mu))
+                                                                          + (mu / theta[1]) *  (1 - gammma_current) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers_t_0) - c[1]) / mu) + std::exp((a[1][1] - (theta[1] * p_sellers_t_1) - c[1]) / mu) + exp_a_0_mu))));
 
                                 break;
 
@@ -360,10 +360,10 @@ int main()
                                                                          std::exp((a[1][1] - (theta[1] * p_sellers_t_1) - c[1]) / mu) + exp_a_0_mu))
                                                 );
 
-                                cs_current = mu * (tau * (gammma_current * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers_t_0)) / mu) + exp_a_0_mu))
-                                                                  + (1 - gammma_current) * (std::log(std::exp((a[1][1] - (theta[1] * p_sellers_t_1)) / mu) + exp_a_0_mu)))
-                                                   + (1 - tau) * (gammma_current * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers_t_0) - c[0]) / mu) + std::exp((a[1][0] - (theta[0] * p_sellers_t_1) - c[0]) / mu) + exp_a_0_mu))
-                                                                          + (1 - gammma_current) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers_t_0) - c[1]) / mu) + std::exp((a[1][1] - (theta[1] * p_sellers_t_1) - c[1]) / mu) + exp_a_0_mu))));
+                                cs_current = (tau * ((mu / theta[0]) * gammma_current * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers_t_0)) / mu) + exp_a_0_mu))
+                                                                  + (mu / theta[1]) *  (1 - gammma_current) * (std::log(std::exp((a[1][1] - (theta[1] * p_sellers_t_1)) / mu) + exp_a_0_mu)))
+                                                   + (1 - tau) * ((mu / theta[0]) * gammma_current * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers_t_0) - c[0]) / mu) + std::exp((a[1][0] - (theta[0] * p_sellers_t_1) - c[0]) / mu) + exp_a_0_mu))
+                                                                          + (mu / theta[1]) *  (1 - gammma_current) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers_t_0) - c[1]) / mu) + std::exp((a[1][1] - (theta[1] * p_sellers_t_1) - c[1]) / mu) + exp_a_0_mu))));
                                 break;
 
                             case 2:
@@ -393,10 +393,10 @@ int main()
                                                                          std::exp((a[1][1] - (theta[1] * p_sellers_t_1) - c[1]) / mu) + exp_a_0_mu))
                                                 );
 
-                                cs_current = mu * (tau * (gammma_current * (std::log(std::exp((a[1][0] - (theta[0] * p_sellers_t_1)) / mu) + exp_a_0_mu))
-                                                                  + (1 - gammma_current) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers_t_0)) / mu) + exp_a_0_mu)))
-                                                   + (1 - tau) * (gammma_current * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers_t_0) - c[0]) / mu) + std::exp((a[1][0] - (theta[0] * p_sellers_t_1) - c[0]) / mu) + exp_a_0_mu))
-                                                                          + (1 - gammma_current) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers_t_0) - c[1]) / mu) + std::exp((a[1][1] - (theta[1] * p_sellers_t_1) - c[1]) / mu) + exp_a_0_mu))));
+                                cs_current = (tau * ((mu / theta[0]) * gammma_current * (std::log(std::exp((a[1][0] - (theta[0] * p_sellers_t_1)) / mu) + exp_a_0_mu))
+                                                                  + (mu / theta[1]) *  (1 - gammma_current) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers_t_0)) / mu) + exp_a_0_mu)))
+                                                   + (1 - tau) * ((mu / theta[0]) * gammma_current * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers_t_0) - c[0]) / mu) + std::exp((a[1][0] - (theta[0] * p_sellers_t_1) - c[0]) / mu) + exp_a_0_mu))
+                                                                          + (mu / theta[1]) *  (1 - gammma_current) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers_t_0) - c[1]) / mu) + std::exp((a[1][1] - (theta[1] * p_sellers_t_1) - c[1]) / mu) + exp_a_0_mu))));
                                 break;
 
                             case 3:
@@ -421,10 +421,10 @@ int main()
                                                                              (std::exp((a[0][1] - (theta[1] * p_sellers_t_0) - c[1]) / mu) +
                                                                               std::exp((a[1][1] - (theta[1] * p_sellers_t_1) - c[1]) / mu) + exp_a_0_mu)));
 
-                                cs_current = mu * (tau * (gammma_current * (std::log(std::exp((a[1][0] - (theta[0] * p_sellers_t_1)) / mu) + exp_a_0_mu))
-                                                                  + (1 - gammma_current) * (std::log(std::exp((a[1][1] - (theta[1] * p_sellers_t_1)) / mu) + exp_a_0_mu)))
-                                                   + (1 - tau) * (gammma_current * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers_t_0) - c[0]) / mu) + std::exp((a[1][0] - (theta[0] * p_sellers_t_1) - c[0]) / mu) + exp_a_0_mu))
-                                                                          + (1 - gammma_current) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers_t_0) - c[1]) / mu) + std::exp((a[1][1] - (theta[1] * p_sellers_t_1) - c[1]) / mu) + exp_a_0_mu))));
+                                cs_current = (tau * ((mu / theta[0]) * gammma_current * (std::log(std::exp((a[1][0] - (theta[0] * p_sellers_t_1)) / mu) + exp_a_0_mu))
+                                                                  + (mu / theta[1]) *  (1 - gammma_current) * (std::log(std::exp((a[1][1] - (theta[1] * p_sellers_t_1)) / mu) + exp_a_0_mu)))
+                                                   + (1 - tau) * ((mu / theta[0]) * gammma_current * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers_t_0) - c[0]) / mu) + std::exp((a[1][0] - (theta[0] * p_sellers_t_1) - c[0]) / mu) + exp_a_0_mu))
+                                                                          + (mu / theta[1]) *  (1 - gammma_current) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers_t_0) - c[1]) / mu) + std::exp((a[1][1] - (theta[1] * p_sellers_t_1) - c[1]) / mu) + exp_a_0_mu))));
                                 break;
                         }
 //                        d_sellers_t.emplace_back(std::vector<double>{d_sellers_t_0, d_sellers_t_1});

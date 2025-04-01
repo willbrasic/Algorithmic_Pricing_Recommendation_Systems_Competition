@@ -243,7 +243,7 @@ int main()
                     // Consumer surplus at time period *t*
                     double exp_sum_gamma = exp((a[0][0] - theta[0] * p_sellers_t_0 - c[0]) / mu) + exp((a[1][0] - theta[0] * p_sellers_t_1 - c[0]) / mu) + exp_a_0_mu;
                     double exp_sum_one_minus_gamma = exp((a[0][1] - theta[1] * p_sellers_t_0 - c[1]) / mu) + exp((a[1][1] - theta[1] * p_sellers_t_1 - c[1]) / mu) + exp_a_0_mu;
-                    double cs_current = mu * (gamma_current * log(exp_sum_gamma) + (1 - gamma_current) * log(exp_sum_one_minus_gamma));
+                    double cs_current = ((mu / theta[0]) * gamma_current * log(exp_sum_gamma) + (mu / theta[1]) *  (1 - gamma_current) * log(exp_sum_one_minus_gamma));
                     cs_t.emplace_back(cs_current);
 
                     // Sellers' profits at time period *t*

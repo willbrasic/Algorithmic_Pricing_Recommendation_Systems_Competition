@@ -241,31 +241,31 @@ std::vector<double> populate_cs(
 
         if (plat_action == 0)
         {
-            cs[s] = mu * (tau * (gammma * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers[s][0])) / mu) + std::exp(a_0 / mu)))
-                                 + (1 - gammma) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers[s][0])) / mu) + std::exp(a_0 / mu))))
-                          + (1 - tau) * (gammma * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers[s][0]) - c[0]) / mu) + std::exp((a[1][0] - (theta[0] * p_sellers[s][1]) - c[0]) / mu) + std::exp(a_0 / mu)))
-                                         + (1 - gammma) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers[s][0]) - c[1]) / mu) + std::exp((a[1][1] - (theta[1] * p_sellers[s][1]) - c[1]) / mu) + std::exp(a_0 / mu)))));
+            cs[s] = (tau * ((mu / theta[0]) * gammma * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers[s][0])) / mu) + std::exp(a_0 / mu)))
+                                 + (mu / theta[1]) *  (1 - gammma) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers[s][0])) / mu) + std::exp(a_0 / mu))))
+                          + (1 - tau) * ((mu / theta[0]) * gammma * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers[s][0]) - c[0]) / mu) + std::exp((a[1][0] - (theta[0] * p_sellers[s][1]) - c[0]) / mu) + std::exp(a_0 / mu)))
+                                         + (mu / theta[1]) *  (1 - gammma) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers[s][0]) - c[1]) / mu) + std::exp((a[1][1] - (theta[1] * p_sellers[s][1]) - c[1]) / mu) + std::exp(a_0 / mu)))));
         }
         else if (plat_action == 1)
         {
-            cs[s] = mu * (tau * (gammma * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers[s][0])) / mu) + std::exp(a_0 / mu)))
-                                 + (1 - gammma) * (std::log(std::exp((a[1][1] - (theta[1] * p_sellers[s][1])) / mu) + std::exp(a_0 / mu))))
-                    + (1 - tau) * (gammma * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers[s][0]) - c[0]) / mu) + std::exp((a[1][0] - (theta[0] * p_sellers[s][1]) - c[0]) / mu) + std::exp(a_0 / mu)))
-                                   + (1 - gammma) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers[s][0]) - c[1]) / mu) + std::exp((a[1][1] - (theta[1] * p_sellers[s][1]) - c[1]) / mu) + std::exp(a_0 / mu)))));
+            cs[s] = (tau * ((mu / theta[0]) * gammma * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers[s][0])) / mu) + std::exp(a_0 / mu)))
+                                 + (mu / theta[1]) *  (1 - gammma) * (std::log(std::exp((a[1][1] - (theta[1] * p_sellers[s][1])) / mu) + std::exp(a_0 / mu))))
+                    + (1 - tau) * ((mu / theta[0]) * gammma * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers[s][0]) - c[0]) / mu) + std::exp((a[1][0] - (theta[0] * p_sellers[s][1]) - c[0]) / mu) + std::exp(a_0 / mu)))
+                                   + (mu / theta[1]) *  (1 - gammma) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers[s][0]) - c[1]) / mu) + std::exp((a[1][1] - (theta[1] * p_sellers[s][1]) - c[1]) / mu) + std::exp(a_0 / mu)))));
         }
         else if (plat_action == 2)
         {
-            cs[s] = mu * (tau * (gammma * (std::log(std::exp((a[1][0] - (theta[0] * p_sellers[s][1])) / mu) + std::exp(a_0 / mu)))
-                                 + (1 - gammma) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers[s][0])) / mu) + std::exp(a_0 / mu))))
-                          + (1 - tau) * (gammma * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers[s][0]) - c[0]) / mu) + std::exp((a[1][0] - (theta[0] * p_sellers[s][1]) - c[0]) / mu) + std::exp(a_0 / mu)))
-                                         + (1 - gammma) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers[s][0]) - c[1]) / mu) + std::exp((a[1][1] - (theta[1] * p_sellers[s][1]) - c[1]) / mu) + std::exp(a_0 / mu)))));
+            cs[s] = (tau * ((mu / theta[0]) * gammma * (std::log(std::exp((a[1][0] - (theta[0] * p_sellers[s][1])) / mu) + std::exp(a_0 / mu)))
+                                 + (mu / theta[1]) *  (1 - gammma) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers[s][0])) / mu) + std::exp(a_0 / mu))))
+                          + (1 - tau) * ((mu / theta[0]) * gammma * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers[s][0]) - c[0]) / mu) + std::exp((a[1][0] - (theta[0] * p_sellers[s][1]) - c[0]) / mu) + std::exp(a_0 / mu)))
+                                         + (mu / theta[1]) *  (1 - gammma) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers[s][0]) - c[1]) / mu) + std::exp((a[1][1] - (theta[1] * p_sellers[s][1]) - c[1]) / mu) + std::exp(a_0 / mu)))));
         }
         else if (plat_action == 3)
         {
-            cs[s] = mu * (tau * (gammma * (std::log(std::exp((a[1][0] - (theta[0] * p_sellers[s][1])) / mu) + std::exp(a_0 / mu)))
-                                 + (1 - gammma) * (std::log(std::exp((a[1][1] - (theta[1] * p_sellers[s][1])) / mu) + std::exp(a_0 / mu))))
-                          + (1 - tau) * (gammma * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers[s][0]) - c[0]) / mu) + std::exp((a[1][0] - (theta[0] * p_sellers[s][1]) - c[0]) / mu) + std::exp(a_0 / mu)))
-                                         + (1 - gammma) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers[s][0]) - c[1]) / mu) + std::exp((a[1][1] - (theta[1] * p_sellers[s][1]) - c[1]) / mu) + std::exp(a_0 / mu)))));
+            cs[s] = (tau * ((mu / theta[0]) * gammma * (std::log(std::exp((a[1][0] - (theta[0] * p_sellers[s][1])) / mu) + std::exp(a_0 / mu)))
+                                 + (mu / theta[1]) *  (1 - gammma) * (std::log(std::exp((a[1][1] - (theta[1] * p_sellers[s][1])) / mu) + std::exp(a_0 / mu))))
+                          + (1 - tau) * ((mu / theta[0]) * gammma * (std::log(std::exp((a[0][0] - (theta[0] * p_sellers[s][0]) - c[0]) / mu) + std::exp((a[1][0] - (theta[0] * p_sellers[s][1]) - c[0]) / mu) + std::exp(a_0 / mu)))
+                                         + (mu / theta[1]) *  (1 - gammma) * (std::log(std::exp((a[0][1] - (theta[1] * p_sellers[s][0]) - c[1]) / mu) + std::exp((a[1][1] - (theta[1] * p_sellers[s][1]) - c[1]) / mu) + std::exp(a_0 / mu)))));
         }
     }
 

@@ -167,7 +167,7 @@ std::vector<double> populate_cs(
         exp_sum_one_minus_gamma += exp(a_0 / mu);
 
         // Calculate consumer surplus for state s
-        cs[s] = mu * (gamma * log(exp_sum_gamma) + (1 - gamma) * log(exp_sum_one_minus_gamma));
+        cs[s] = ((mu / theta[0]) * gamma * log(exp_sum_gamma) + (mu / theta[1]) *  (1 - gamma) * log(exp_sum_one_minus_gamma));
     }
 
     return cs;

@@ -164,10 +164,10 @@ for g = 1:num_gamma
         comp_pi = ((1 - f) .* comp_p - mc) .* comp_d;
         
         % Competitive consumer surplus
-        comp_cs = mu .* (tau .* (gamma_curr .* (log(exp((a(1, 1) - (theta_curr(1) .* comp_p(1))) ./ mu) + exp(a0 ./ mu)) ) + ...
-                    (1 - gamma_curr) .* (log(exp((a(2, 2) - (theta_curr(2) .* comp_p(2))) ./ mu) + exp(a0 ./ mu))) ) ...
-                    + (1 - tau) .* (gamma_curr .* (log(exp((a(1, 1) - (theta_curr(1) .* comp_p(1)) - c(1)) ./ mu) + exp((a(2, 1) - (theta_curr(1) .* comp_p(2)) - c(1)) ./ mu) + exp(a0 ./ mu)) ) + ...
-                        (1 - gamma_curr) .* (log(exp((a(1, 2) - (theta_curr(2) .* comp_p(1)) - c(2)) ./ mu) + exp((a(2, 2) - (theta_curr(2) .* comp_p(2)) - c(2)) ./ mu) + exp(a0 ./ mu)) ) ) );
+        comp_cs = (tau .* ( (mu ./ theta_curr(1)) .* gamma_curr .* (log(exp((a(1, 1) - (theta_curr(1) .* comp_p(1))) ./ mu) + exp(a0 ./ mu)) ) + ...
+                    (mu ./ theta_curr(2)) .* (1 - gamma_curr) .* (log(exp((a(2, 2) - (theta_curr(2) .* comp_p(2))) ./ mu) + exp(a0 ./ mu))) ) ...
+                    + (1 - tau) .* ((mu ./ theta_curr(1)) .* gamma_curr .* (log(exp((a(1, 1) - (theta_curr(1) .* comp_p(1)) - c(1)) ./ mu) + exp((a(2, 1) - (theta_curr(1) .* comp_p(2)) - c(1)) ./ mu) + exp(a0 ./ mu)) ) + ...
+                        (mu ./ theta_curr(2)) .* (1 - gamma_curr) .* (log(exp((a(1, 2) - (theta_curr(2) .* comp_p(1)) - c(2)) ./ mu) + exp((a(2, 2) - (theta_curr(2) .* comp_p(2)) - c(2)) ./ mu) + exp(a0 ./ mu)) ) ) );
 
         % Store equilibrium results
         comp_p_results(index, 3:end) = comp_p;
@@ -182,11 +182,11 @@ for g = 1:num_gamma
 end
 
 % Save results to a .mat file
-save("LE_" + version + "/" + version + "_Comp_Price.mat", "comp_p_results");
-save("LE_" + version + "/" + version + "_Comp_Demand.mat", "comp_d_results");
-save("LE_" + version + "/" + version + "_Comp_Revenue.mat", "comp_rvn_results");
-save("LE_" + version + "/" + version + "_Comp_Profit.mat", "comp_pi_results");
-save("LE_" + version + "/" + version + "_Comp_CS.mat", "comp_cs_results");
+save(version + "/" + version + "_Results/" + version + "_Comp_Price.mat", "comp_p_results");
+save(version + "/" + version + "_Results/" + version + "_Comp_Demand.mat", "comp_d_results");
+save(version + "/" + version + "_Results/" + version + "_Comp_Revenue.mat", "comp_rvn_results");
+save(version + "/" + version + "_Results/" + version + "_Comp_Profit.mat", "comp_pi_results");
+save(version + "/" + version + "_Results/" + version + "_Comp_CS.mat", "comp_cs_results");
 
 
 
